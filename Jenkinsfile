@@ -1,13 +1,14 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:23-alpine'  // This specifies the Docker image to use
-            args '-p 3000:3000'
-        }
+    agent any
+    
+    tools {
+        nodejs 'NodeJS 23.10.0'  // This must match what you configured in Jenkins
     }
+    
     environment {
         CI = 'true'
     }
+    
     stages {
         stage('Build') {
             steps {
