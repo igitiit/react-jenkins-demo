@@ -9,6 +9,6 @@ test('renders learn react link', () => {
 
 test('app header exists', () => {
   render(<App />);
-  const headerElement = screen.getByRole('heading');
+  const headerElement = screen.getByRole('banner'); // 'banner' is the role for <header> elements
   expect(headerElement).toBeInTheDocument();
 });
