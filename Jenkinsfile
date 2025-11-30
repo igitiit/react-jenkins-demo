@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     tools {
-        nodejs 'Node23'  // Use the name Jenkins suggests is configured
+        nodejs 'Node25'  // Use the name Jenkins suggests is configured
     }
     
     environment {
